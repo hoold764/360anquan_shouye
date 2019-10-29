@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>360全屏滚动</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullpage.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="css/360.css">
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section first">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="text">
+				<img src="images/text_1.png">
+				<img src="images/text_2.png">
+				<img src="images/text_3.png">
+				<img src="images/text_4.png">
+				<img src="images/text_5.png">
+				<img src="images/text_6.png">
+				<img src="images/text_7.png">
+				<img src="images/text_8.png">
+			</div>
+			<div class="info">
+				<img src="images/info_1.png">
+			</div>
+		</div>
+
+		<div class="section second">
+			<div class="shield">
+				<img src="images/shield_1.png">
+				<img src="images/shield_2.png">
+				<img src="images/shield_3.png">
+				<img src="images/shield_4.png">
+				<img src="images/shield_5.png">
+				<img src="images/shield_6.png">
+				<img src="images/shield_7.png">
+				<img src="images/shield_8.png">
+				<img src="images/shield_9.png">
+			</div>
+			<div class="info">
+				<img src="images/info_2.png">
+			</div>
+		</div>
+
+		<div class="section third">
+			<div class="info">
+				<img src="images/info_3.png">
+			</div>
+			<div class="rocket">
+				<div class="circle">
+					<div class="rocket_bg"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section fourth">
+		<!-- 搜索边框 -->
+			<div class="search">
+				<div class="searchT">
+					<div class="searchTb"></div>
+				</div>
+				<div class="searchB">
+					<img src="images/result.png">
+				</div>
+			</div>
+		<!-- 右边字体 -->
+			<div class="text">
+				<img src="images/info_4.png">
+			</div>
+		</div>
+		
+		<div class="section fifth">
+			<div class="text">
+				<img src="images/info_5.png">
+			</div>
+			<div class="box">
+				<div class="boxT"></div>
+				<div class="boxTB"></div>
+				<div class="boxB"></div>
+				<div class="boxBL"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('#fullpage').fullpage({
+				sectionsColor:[
+					'#0da5d7',
+					'#2ab561',
+					'#de8910',
+					'#16ba9d',
+					'#0da5d6'
+				],
+				loopTop:true,
+				loopBottom:true,
+				navigation:true,
+				anchors:["first","second","thrid","fourth","fifth"],
+				afterLoad:function(anchorLink,index){
+					$('.section').removeClass('current');
+					$('.section').eq(index-1).addClass('current');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

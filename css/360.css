@@ -1,0 +1,175 @@
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background: #fff;
+}
+.first .logo {
+	text-align: center;
+}
+.first .text {
+	text-align: center;
+	margin-top: 90px;
+	margin-bottom: 60px;
+}
+/*添加动画*/
+.first .text img {
+	margin-left: 24px;
+	opacity: 0;
+}
+.first.current .text img {
+	margin-left: 0;
+	opacity: 1;
+	transition: 2s all;
+}
+.first .info {
+	text-align: center;
+}
+.second {
+	padding:100px;
+}
+.second .shield {
+	width: 420px;
+	float: left;
+}
+/*添加动画*/
+.second .shield img {
+	transform: translateX(100%);
+	opacity: 0;
+}
+.second.current .shield img {
+	transform: translateX(0);
+	opacity: 1;
+	transition: all 2s linear .2s;
+}
+.second .info {
+	float: right;
+}
+.third {
+	padding: 0 100px;
+}
+.third .info {
+	float: left;
+}
+.third .rocket .circle {
+	width: 453px;
+	height: 449px;
+	background: url(../images/circle.png);
+	float: right;
+	position: relative;
+}
+.third .rocket .circle .rocket_bg {
+	width: 203px;
+	height: 204px;
+	background: url(../images/rocket.png);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -101.5px;
+	margin-top: -102px;
+	transform: translate(-250%,250%);
+}
+/*添加动画*/
+.third.current .rocket .circle .rocket_bg {
+	transform: translate(0,0);
+	transition: all 2s;
+}
+
+.fourth {
+	padding:0 100px;
+}
+.fourth .search {
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.fourth .searchT {
+	background: url(../images/search.png);
+	width: 529px;
+	height: 66px;
+	position: absolute;
+	transform: translateX(-100%);
+}
+.fourth.current .searchT {
+	transform: translateX(0);
+	transition: all 2s;
+}
+/*添加动画*/
+
+.fourth .searchT .searchTb {
+	width: 0;
+	height: 22px;
+	background: url(../images/key.png);
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.fourth.current .searchT .searchTb{
+	animation: move 2s linear 1.3s;
+	/*让动画执行完以后,保存最后的状态*/
+	/*forwards： 设置对象状态为动画结束时的状态 */
+	/*animation-fill-mode:forwards;*/
+	animation-fill-mode: forwards;
+} 
+/*定义动画*/
+@keyframes move {
+	from {
+		width: 0;
+	}
+	to {
+		width: 99px;
+	}
+}
+.fourth .searchB {
+	margin-top: 54px;
+	overflow: hidden;
+}
+.fourth .searchB img {
+	transform: translateY(-100%);
+}
+.fourth.current .searchB img{
+	transform: translateY(0);
+	transition: all 1s 3.3s;
+}
+.fourth .text {
+	float: right;
+}
+.fifth .text{
+	text-align: center;
+	float: top;
+}
+.fifth .box {
+	width: 1002px;
+	height: 470px;
+	border: 1px solid rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.2);
+	margin: 20px auto;
+	position: relative;
+}
+.fifth .box .boxT {
+	width: 1004px;
+	height: 79px;
+	background: url(../images/toolbar.png);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.fifth .box .boxTB {
+	width:920px;
+	height: 25px;
+	border:1px solid rgba(255,255,255,0.5);
+	margin-left: 69px;
+	margin-top: 31px;
+}
+.fifth .box .boxB {
+	width: 394px;
+	height: 29px;
+	background: url(../images/extra.png);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.fifth .box .boxBL {
+	width: 100%;
+	border: 0.5px solid rgba(255,255,255,0.5);
+	position: absolute;
+	bottom: 31px;
+	right: 0;
+}
